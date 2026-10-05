@@ -1,0 +1,2 @@
+getData();
+console.log('test');
