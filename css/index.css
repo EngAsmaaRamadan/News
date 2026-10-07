@@ -26,3 +26,18 @@ button.filter:hover::before{
 button.filter span{
 	position: relative;
 }
+
+#Data .image img{
+	min-height: 190px;
+}
+
+#Data .card{
+	transform: translateY(0);
+	transition-duration: 0.5s;
+	width: 280px;
+}
+
+#Data .card:hover{
+	transform: translateY(-15px);
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
