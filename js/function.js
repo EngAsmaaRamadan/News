@@ -9,7 +9,7 @@ console.log(date);
 		from: date,
 		page: page,
 		pageSize: pageSize,
-		apiKey: "a533fcdf5e594d99861dfc12f484e6fa"
+		apiKey: "9dd40dacbcd544b2aa321d8b7b45bc24"
 	});
 	let response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`);
 	let data = await response.json();
@@ -17,6 +17,7 @@ console.log(date);
 	lastCategory = $('#Category').val();
 	lastSearch = $('#Search').val();
 	lastPage = page;
+	++numOfRequests;
 }
 
 function showData(data, currentPage) {

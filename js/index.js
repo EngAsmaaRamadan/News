@@ -1,6 +1,8 @@
 let lastCategory = "",
     lastSearch = "",
-    lastPage = 0;
+    lastPage = 0,
+    numOfRequests = 0;
+    
 getData();
 
 $("form").submit(function(e){
@@ -12,3 +14,7 @@ $("form").submit(function(e){
     }
 	    getData(category,search,1);
 });
+
+/*for(let i=0 ; i<100 ;i++){
+  getData();
+}*/
