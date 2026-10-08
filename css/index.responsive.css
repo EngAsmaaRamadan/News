@@ -7,9 +7,17 @@
     button.filter{
         font-size: 20px;
     }
+
+    #Data .card{
+        width: initial;
+    }
 }
 
-@media (min-width: 769px) and (max-width: 1300px) {}
+@media (min-width: 769px) and (max-width: 1300px) {
+    #Data .card{
+        width: 280px;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1300px) {}
 

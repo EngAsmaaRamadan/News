@@ -41,6 +41,7 @@ button.filter span,
 #Filter input{
 	background: rgba(0, 0, 0, 0.5);
 	border: none;
+	color: #fff;
 	transition-duration: 0.5s;
 }
 
@@ -49,6 +50,10 @@ button.filter span,
 	border: 1.5px solid var(--main-color);
     background-color: transparent;
     box-shadow: 0 0 0 0.5px var(--main-color);
+}
+
+#Filter option{
+	color: #000;
 }
 
 #Filter label{

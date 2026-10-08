@@ -54,19 +54,10 @@ function paginate(currentPage) {
 	getData(category, search, currentPage);
 }
 
-//using it for prevent show null data
-// function checkMainDataNotNull(item){
-// 		if(item != null){
-// 			return true
-// 		}else{
-// 			return false;
-// 		}
-// }
-
 function cardComponent(item) {
 	console.log(item);
 	return `
-		<div class="col-lg-4 col-md-6 mb-5 part">
+		<div class="col-lg-4 col-sm-6 mb-5 part">
 			<div class="item">
 				<div class="card m-auto">
 				<div class="image">
@@ -74,7 +65,7 @@ function cardComponent(item) {
 					</div>
 					<div class="card-body">
 						<h5 class="card-title">${item.title?.slice(0, 10)}...</h5>
-						<p class="card-text">${item.description?.slice(0, 200)}...</p>
+						<p class="card-text">${(item.description === null || item.description === undefined ) ? "click on button to more description" : item.description.slice(0, 200)}...</p>
 						<a href="${item.url}" target="_blank" class="see text-decoration-none"><span>See More</span></a>
 					</div>
 				</div>
