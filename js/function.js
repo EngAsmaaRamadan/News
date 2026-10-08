@@ -85,7 +85,7 @@ function cardComponent(item){
 					<div class="card-body">
 						<h5 class="card-title">${item.title?.slice(0,10)}...</h5>
 						<p class="card-text">${item.description?.slice(0,200)}...</p>
-						<a href="${item.url}" target="_blank" class="btn btn-primary">See More</a>
+						<a href="${item.url}" target="_blank" class="see text-decoration-none"><span>See More</span></a>
 					</div>
 				</div>
 			</div>

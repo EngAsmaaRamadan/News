@@ -1,4 +1,4 @@
-button.filter{
+button.filter,a.see{
 	padding: 6px 12px;
 	background:linear-gradient(#027,#fff,#E22);
 	border-radius: 10px;
@@ -7,24 +7,32 @@ button.filter{
 	position: relative;
 }
 
-button.filter::before{
+button.filter::before,
+.see::before{
 	content: "";
 	display: block;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.0);
 	position: absolute;
+	border-radius: 10px;
 	top: 0;
 	left: 0;
 	transition-duration: 0.5s;
 }
 
-button.filter:hover::before{
+button.filter:hover::before,
+.see:hover::before{
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-button.filter span{
+button.filter span,
+.see span{
 	position: relative;
+}
+
+.see{
+	color: #000;
 }
 
 #Data .image{
@@ -52,6 +60,14 @@ button.filter span{
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+#Data .card-title{
+	color:rgb(0, 34, 119);
+}
+
 select.form-select#Category {
     --bs-form-select-bg-img: "";
+}
+
+.page-link{
+	cursor: pointer;
 }
