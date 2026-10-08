@@ -2,7 +2,12 @@
 
 @media (min-width: 371px) and (max-width: 1300px) {}
 
-@media (min-width: 577px) and (max-width: 1300px) {}
+@media (min-width: 577px) and (max-width: 1300px) {
+    #Filter label,
+    button.filter{
+        font-size: 20px;
+    }
+}
 
 @media (min-width: 769px) and (max-width: 1300px) {}
 

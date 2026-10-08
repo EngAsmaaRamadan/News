@@ -1,7 +1,11 @@
+:root{
+	--main-color:#D7D7D7;
+}
+
 body{
 	font-family: 'Yanone Kaffeesatz';
 	background: #2774ae;  
-	background: -webkit-linear-gradient(to right, #002E5D, #F44,#fff,#002E5D);
-	background: linear-gradient(to right, #002E5D,#fff,#002E5D); 
+	background: -webkit-linear-gradient(to right, #002E5D, #F44,#000,#002E5D);
+	background: linear-gradient(to right, #002E5D,#000,#002E5D); 
 	color: #000;
 }

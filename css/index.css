@@ -1,6 +1,6 @@
 button.filter,a.see{
 	padding: 6px 12px;
-	background:linear-gradient(#027,#fff,#E22);
+	background:linear-gradient(#027,#000,#E22);
 	border-radius: 10px;
 	border: none;
 	overflow: hidden;
@@ -19,6 +19,7 @@ button.filter::before,
 	top: 0;
 	left: 0;
 	transition-duration: 0.5s;
+	z-index: 2;
 }
 
 button.filter:hover::before,
@@ -29,10 +30,25 @@ button.filter:hover::before,
 button.filter span,
 .see span{
 	position: relative;
+	color: #fff;
 }
 
 .see{
-	color: #000;
+	color: #fff;
+}
+
+#Filter select,
+#Filter input{
+	background: rgba(0, 0, 0, 0.5);
+	border: none;
+	transition-duration: 0.5s;
+}
+
+#Filter select:focus,
+#Filter input:focus{
+	border: 1.5px solid var(--main-color);
+    background-color: transparent;
+    box-shadow: 0 0 0 0.5px var(--main-color);
 }
 
 #Data .image{
@@ -40,7 +56,7 @@ button.filter span,
 }
 
 #Data .image img{
-	min-height: 190px;
+	height: 150px;
 	transform: scale(1.0);
 	transition-duration: 0.5s;
 }
@@ -53,6 +69,8 @@ button.filter span,
 	transform: translateY(0);
 	transition-duration: 0.5s;
 	width: 280px;
+	min-height: 380px;
+	border-radius: 10px;
 }
 
 #Data .card:hover{
@@ -60,8 +78,24 @@ button.filter span,
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+#Data .card{
+	--bs-card-bg: rgba(0, 0, 0, 0.5);
+	position: relative;
+}
+
+#Data .card p{
+	color: #fff;
+}
+
+#Data .card a{
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 #Data .card-title{
-	color:rgb(0, 34, 119);
+	color:var(--main-color);
 }
 
 select.form-select#Category {
@@ -70,4 +104,10 @@ select.form-select#Category {
 
 .page-link{
 	cursor: pointer;
+}
+
+#Filter label{
+	color: var(--main-color);
+    font-weight: 800;
+    letter-spacing: 1px;
 }
