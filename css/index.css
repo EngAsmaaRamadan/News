@@ -27,8 +27,18 @@ button.filter span{
 	position: relative;
 }
 
+#Data .image{
+	overflow: hidden;
+}
+
 #Data .image img{
 	min-height: 190px;
+	transform: scale(1.0);
+	transition-duration: 0.5s;
+}
+
+#Data .image:hover img{
+	transform: scale(1.2);
 }
 
 #Data .card{
