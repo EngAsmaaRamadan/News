@@ -1,14 +1,15 @@
 let lastCategory = "",
     lastSearch = "",
     lastPage = 0,
-    numOfRequests = 0;
-    
+    $category = $('#Category'),
+    $Search = $('#Search');
+
 getData();
 
 $("form").submit(function(e){
     e.preventDefault();
-    let category = $('#Category').val(),
-		    search = $('#Search').val();
+    let category = $category.val().val(),
+		    search = $Search.val();
     if(lastCategory == category && lastSearch == search){
       return;
     }

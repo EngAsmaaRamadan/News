@@ -12,6 +12,10 @@ console.log(date);
 		apiKey: "9dd40dacbcd544b2aa321d8b7b45bc24"
 	});
 	let response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`);
+	if(response.status == 429){
+		
+		return;
+	}
 	let data = await response.json();
 	showData(data, page);
 	lastCategory = $('#Category').val();
@@ -31,11 +35,10 @@ function showData(data, currentPage) {
 			console.log(item.title, item.description, item.url);
 			$dataContainer.append(cardComponent(item));
 			$('nav .pagination').html(preparePagination(currentPage, numberOfPages));
-
 		}
 	} else {
 		$dataContainer.html(`<div class="alert alert-warning text-center" role="alert">No Data is matched related with these Category and Search</div>`);
-		$('nav .pagination').html(preparePagination(currentPage, numberOfPages));
+		$('nav .pagination').html("");
 	}
 	console.log(numberOfPages);
 }
@@ -54,8 +57,8 @@ function preparePagination(currentPage, totalPages) {
 
 function paginate(currentPage) {
 	console.log('hi');
-	let category = $('#Category').val(),
-		search = $('#Search').val();
+	let category = $category.val(),
+		search = $Search.val();
 	if(lastPage != currentPage){
       getData(category, search, currentPage);
     }
@@ -71,8 +74,8 @@ function cardComponent(item) {
 					<img src="${item.urlToImage ?? 'images/default.jpg'}" onerror="this.src='images/default.jpg'" class="card-img-top" alt="...">
 					</div>
 					<div class="card-body">
-						<h5 class="card-title">${item.title?.slice(0, 10)}...</h5>
-						<p class="card-text">${(item.description === null || item.description === undefined ) ? "click on button to more description" : item.description.slice(0, 200)}...</p>
+						<h5 class="card-title">${item.title?.slice(0, 10) + "..."?? "Unknown"}</h5>
+						<p class="card-text">${ item.description.slice(0, 200) + "..."  ?? "click on button to more description"}</p>
 						<a href="${item.url}" target="_blank" class="see text-decoration-none"><span>See More</span></a>
 					</div>
 				</div>
