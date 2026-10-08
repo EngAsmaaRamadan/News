@@ -51,6 +51,12 @@ button.filter span,
     box-shadow: 0 0 0 0.5px var(--main-color);
 }
 
+#Filter label{
+	color: var(--main-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
 #Data .image{
 	overflow: hidden;
 }
@@ -106,8 +112,18 @@ select.form-select#Category {
 	cursor: pointer;
 }
 
-#Filter label{
-	color: var(--main-color);
-    font-weight: 800;
-    letter-spacing: 1px;
+.pagination .page-item .page-link{
+	background: rgba(0, 0, 0, 0.5);
+	color:rgba(215, 215, 215, 1);
+	border-color: transparent;
+}
+
+.pagination .page-item .page-link.active{
+	color: #000;
+	background: var(--main-color);
+}
+
+.pagination .page-item:first-child .page-link.disabled,
+.pagination .page-item:last-child .page-link.disabled{
+	color:rgba(215, 215, 215, 0.5);
 }
