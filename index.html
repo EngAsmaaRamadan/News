@@ -18,12 +18,20 @@
 <body>
 	<section id="Filter" class="py-5">
 		<div class="container">
+			<form>
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="item">
 						<div class="mb-4">
     						<label for="Category" class="form-label">Category</label>
-    						<input type="email" class="form-control" id="Category">
+    						<!-- <input type="email" class="form-control"> -->
+							<select class="form-select" id="Category">
+								<option selected>Business</option>
+								<option>Health</option>
+								<option>Science</option>
+								<option>Sports</option>
+								<option>Technology</option>
+								</select>
   						</div>
 					</div>
 				</div>
@@ -31,12 +39,13 @@
 					<div class="item">
 						<div class="mb-4">
     						<label for="Search" class="form-label">Search</label>
-    						<input type="email" class="form-control" id="Search">
+    						<input type="text" class="form-control" id="Search">
   						</div>
 					</div>
 				</div>
 				<button class="filter w-75 m-auto"><span>Filter</span></button>
 			</div>
+			</form>
 		</div>
 	</section>
 	<section id="Data">
@@ -47,8 +56,8 @@
 			</div>
 			<nav class="mt-5">
   <ul class="pagination justify-content-center">
-    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    
+    
     <li class="page-item">
       <a class="page-link" href="#" aria-current="page">2</a>
     </li>
