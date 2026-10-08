@@ -1,18 +1,22 @@
 async function getData(category = "business", search = "", page = 1, pageSize = 10) {
+let date = new Date( new Date().setMonth((new Date().getMonth())-1)).toISOString().split('T')[0];//to put date dynamic
+console.log(date);
 
 	let parameters = new URLSearchParams({
 		category: category,
 		q: search,
 		sortBy: "publishedAt",
-		from: "2026-09-18",
+		from: date,
 		page: page,
 		pageSize: pageSize,
 		apiKey: "a533fcdf5e594d99861dfc12f484e6fa"
 	});
 	let response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`);
 	let data = await response.json();
-	console.log(data);
 	showData(data, page);
+	lastCategory = $('#Category').val();
+	lastSearch = $('#Search').val();
+	lastPage = page;
 }
 
 function showData(data, currentPage) {
@@ -51,7 +55,9 @@ function paginate(currentPage) {
 	console.log('hi');
 	let category = $('#Category').val(),
 		search = $('#Search').val();
-	getData(category, search, currentPage);
+	if(lastPage != currentPage){
+      getData(category, search, currentPage);
+    }
 }
 
 function cardComponent(item) {
