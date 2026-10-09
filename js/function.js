@@ -63,13 +63,10 @@ function paginate(currentPage) {
 		search = $Search.val();
 	if(lastPage != currentPage){
       getData(category, search, currentPage);
-	console.log('hi');
-
     }
 }
 
-function cardComponent(item) {
-	
+function cardComponent(item) {	
 	return `
 		<div class="col-lg-4 col-sm-6 mb-5 part">
 			<div class="item">
