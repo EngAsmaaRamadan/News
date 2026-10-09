@@ -29,26 +29,6 @@ The app pulls live news from the **free News API** across 5 categories, with the
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-### 🖥️ Main View
-![Main View](./images/main.png)
-
-### 🔍 Filtering + Pagination
-![Filtering](./images/filter.png)
-
-### ⌨️ Keyboard Navigation Demo
-![Keyboard Demo](./images/keyboard-demo.gif)
-
-</div>
-
-> 📁 _Create an `images/` folder in your repo and drop your screenshots + a GIF demo there.  
-> A short GIF showing keyboard navigation and pagination in action makes a HUGE difference._
-
----
-
 ## ✨ Features
 
 ### 🔍 Filtering & Search
@@ -119,4 +99,6 @@ Each news item is displayed as a card containing:
 
 1. **Clone** the repository:
    ```bash
-   git clone https://github.com/your-username/news-app.git
+   git clone https://github.com/EngAsmaaRamadan/News.git
+
+2. **Work** on live server
