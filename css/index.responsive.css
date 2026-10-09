@@ -1,6 +1,12 @@
 @media (max-width: 1300px) {}
 
-@media (min-width: 371px) and (max-width: 1300px) {}
+@media (min-width: 371px) and (max-width: 1300px) {
+    #Data .alert-danger{
+        font-size: 14px;
+        width: 90%;
+        margin: auto;
+    }
+}
 
 @media (min-width: 577px) and (max-width: 1300px) {
     #Filter label,
@@ -9,6 +15,11 @@
     }
 
     #Data .card{
+        width: initial;
+    }
+
+    #Data .alert-danger{
+        font-size: 16px;
         width: initial;
     }
 }

@@ -62,6 +62,14 @@ button.filter span,
     letter-spacing: 1px;
 }
 
+button.filter.loopButton{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	color: #fff;
+	font-size: 18px;
+}
+
 #Data .image{
 	overflow: hidden;
 }
