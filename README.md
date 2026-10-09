@@ -17,13 +17,6 @@
 
 ---
 
-## 🎬 Live Demo
-
-> 🔗 **[Click here to try the app](#)**  
-> _(Replace `#` with your GitHub Pages / Netlify / Vercel link)_
-
----
-
 ## 📌 Overview
 
 **News App** is a practice project built to master working with **external APIs**, fetching data from outside sources, processing it, and displaying it interactively.
