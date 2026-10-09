@@ -7,7 +7,7 @@ async function getData(category = "business", search = "", page = 1, pageSize = 
 		from: date,
 		page: page,
 		pageSize: pageSize,
-		apiKey: "1130b11258844c96a067cde699a9c2aa"
+		apiKey: "f562bf7c7ce940f19680c0af34a623b9"
 	});
 	let response = await fetch(`https://newsapi.org/v2/top-headlines?${parameters.toString()}`);
 	
@@ -16,6 +16,7 @@ async function getData(category = "business", search = "", page = 1, pageSize = 
 		$('nav .pagination').html("");
 		return;
 	}
+	
 	let data = await response.json();
 	showData(data, page);
 	lastCategory = $('#Category').val();

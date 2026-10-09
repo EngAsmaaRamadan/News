@@ -23,7 +23,7 @@ $("form").submit(function(e){
 $(document).keyup(function(e){
     paginationArr.forEach(function(paginator){
       if(paginator == e.key){
-        paginate(e.key);
+        paginate(paginator);
         return;
       }
     });
